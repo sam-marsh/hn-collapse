@@ -12,12 +12,13 @@ $(document).ready(function() {
             thing.find('.comment').hide();
             btn.text('[+]');
 
-            var myIndent = thing.find("img[src='s.gif']").attr('width');
+            var myIndent = thing.find("img[src='s.gif']").width();
 
             var children = [];
             var curr = thing.next();
             while (true) {
-                var currIndent = curr.find("img[src='s.gif']").attr('width');
+                var currIndent = curr.find("img[src='s.gif']").width();
+                console.log(currIndent);
                 if (currIndent > myIndent) {
                     children.push(curr);
                 } else {
